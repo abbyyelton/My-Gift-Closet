@@ -15,13 +15,10 @@
 .body {
   padding-top: 40px;
 }
-#add-gift {
+#main {
   background-image: url("../img/background-green-multi.jpg");
   margin-right: 10%;
   margin-left: 10%;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  display: none;
 }
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
@@ -37,10 +34,10 @@ aside,
 details,
 figcaption,
 figure,
-footer,
+section,
 header,
 hgroup,
-add-gift,
+main,
 menu,
 nav,
 section,
@@ -6326,7 +6323,7 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-section:after {
   clear: both;
 }
 .center-block {
@@ -6615,7 +6612,7 @@ body {
 }
 .section {
   position: relative;
-  padding: 35px 0;
+  padding: 50px 0;
 }
 .section .background-image {
   z-index: 0;

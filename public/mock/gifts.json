@@ -1,0 +1,23 @@
+[
+  {"title": "Red shirt",
+    "description": "Land's End Size Medium",
+    "price": "$20",
+    "storeLink": "Land's End",
+    "recipient": "Holly",
+    "holiday": "Christmas",
+    "notes": "May give for her birthday instead. Stored in closet downstairs.",
+    "purchased": true,
+    "wrapped": true
+  },
+  {"title": "Notebook",
+    "description": "Pink and black",
+    "price": "$10",
+    "storeLink": "www.target.com/notebook.html",
+    "recipient": "Kate",
+    "holiday": "Birthday",
+    "notes": "Stored in closet downstairs.",
+    "purchased": true,
+    "wrapped": false
+  }
+
+]
