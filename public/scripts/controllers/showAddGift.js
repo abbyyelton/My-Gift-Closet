@@ -1,7 +1,8 @@
 'use strict';
 
+//Controller for 'Add Gift' link to create the modal
 angular.module('giftClosetApp')
-.controller('showAddGiftCtrl', function($scope, ModalService, dataService) {
+.controller('showAddGiftCtrl', function($scope, $rootScope, ModalService, dataService) {
 
   $scope.title = null;
   $scope.price = null;
@@ -22,10 +23,10 @@ angular.module('giftClosetApp')
     }).then(function(modal) {
       modal.element.modal();
       modal.close.then(function(gift) {
+        //Add gift when button pushed
         if (gift.title != null) {
-          var array = [];
-          array.push(gift);
-          dataService.saveGifts(array);
+          $scope.gifts.push(gift);
+          $rootScope.$broadcast('saveGifts(' +$scope.gifts +')');
         }
       });
     });

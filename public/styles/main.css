@@ -3,6 +3,34 @@
   margin-right: 0;
 }
 
+#blurb {
+  padding-top: 50px;
+}
+
+#large-title {
+  margin-top: -100px;
+}
+
+#list-gifts {
+  background-image: url("../img/background-green-multi.jpg");
+}
+
+#add-gift {
+  margin-right: 10%;
+  margin-left: 10%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: none;
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
 a, a:hover, a:active, a:visited a:link {
   text-decoration: none;
 }
@@ -67,28 +95,13 @@ strong {
     color: #fff;
     padding: 25px 0 27px 25px; }
 
-/*input[type="checkbox"] {
-    display:none;
-}
-input[type="checkbox"]  {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:-1px 4px 0 0;
-    vertical-align:middle;
-    background:url(checkbox-empty.svg) left top no-repeat;
-    cursor:pointer;
-}
-input[type="checkbox"]:checked  {
-    background:url(checkbox-filled.svg) left top no-repeat;
-}*/
-
 
 /* Layout
 ================================= */
 
 body {
-  padding-top: 30px;
+  padding-top: 40px;
+  margin: 0;
 }
 
 .ft {

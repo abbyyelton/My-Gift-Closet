@@ -18,8 +18,6 @@
     <script src="/scripts/controllers/main.js"></script>
     <script src="/scripts/services/data.js"></script>
     <script src="/scripts/directives/gift.js"></script>
-    <script src="/scripts/directives/showAddGift.js"></script>
-    <script src="/scripts/directives/addGift.js"></script>
 
 </head>
 <body ng-app="giftClosetApp">
@@ -44,11 +42,11 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12" id="list-gifts" >
+          <div class="col-md-12" ng-controller="mainCtrl" id="list-gifts" >
             <div class="add" ng-controller="showAddGiftCtrl">
               <a href="#" class="label-primary" ng-click="showAddGift()"><h4><img src="/img/favicon-32x32.png" sizes="32x32"> New Gift</h4></a>
             </div>
-            <div ng-controller="mainCtrl">
+            <div>
               <gift></gift>
             </div>
           </div>

@@ -47,7 +47,6 @@ router.put('/gifts/:id', function(req, res) {
 
 // DELETE route to delete existing entries
 router.delete('/gifts/:id', function(req, res) {
-  console.log('in 1st delete');
   var id = req.params.id;
   Gift.findByIdAndRemove(id, function(err) {
     if (err) {

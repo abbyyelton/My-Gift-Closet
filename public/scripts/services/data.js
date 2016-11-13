@@ -1,5 +1,6 @@
 'use strict';
 
+//Database operations
 angular.module('giftClosetApp')
 .service('dataService', function($http, $q) {
   this.getGifts = function(cb) {
@@ -14,9 +15,11 @@ angular.module('giftClosetApp')
     var queue = [];
     gifts.forEach(function(gift) {
       var request;
+      //check to see if gift already exists in database
       if (!gift._id) {
         request = $http.post('/api/gifts', gift);
       } else {
+        //if exists, fetch record and update
         request = $http.put('/api/gifts/' + gift._id, gift)
         .then(function(result) {
           gift = result.data.gift;
