@@ -5,7 +5,7 @@ Version 1.0.0: Basic functionality including the ability to add, update, and del
 
 Future Version Features: Add recipients, add holidays, calendar, reminders when holidays approach, ability to archive old holidays
 
-My Gift Closet requires NPM so make sure it's installed before beginning.
+My Gift Closet requires NPM and MongoDB, so make sure they are installed before beginning.
 
 1. Clone the repository
 2. Go to your My-Gift-Closet directory

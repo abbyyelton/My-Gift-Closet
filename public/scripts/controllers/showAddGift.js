@@ -26,7 +26,7 @@ angular.module('giftClosetApp')
         //Add gift when button pushed
         if (gift.title != null) {
           $scope.gifts.push(gift);
-          $rootScope.$broadcast('saveGifts(' +$scope.gifts +')');
+          $rootScope.$broadcast('saveGifts');
         }
       });
     });

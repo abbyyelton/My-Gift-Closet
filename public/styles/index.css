@@ -4149,7 +4149,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-fixed-top {
-  top: 20px;
+  top: 0px;
   border-width: 0 0 2px;
 }
 .navbar-fixed-bottom {

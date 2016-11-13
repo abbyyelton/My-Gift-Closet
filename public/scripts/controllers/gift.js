@@ -28,9 +28,8 @@ angular.module('giftClosetApp')
   };
 
   //for saving gift from modal
-  $rootScope.$on('saveGifts', function(gifts) {
-    $scope.gifts = gifts;
+  $rootScope.$on('saveGifts', function() {
     $scope.saveGifts();
-  })
+  });
 
 });
