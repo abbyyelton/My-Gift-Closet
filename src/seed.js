@@ -3,24 +3,24 @@
 var Gift = require('./models/gift.js');
 
 var gifts = [
-  {"title": "Red shirt",
-    "price": "$20",
-    "storeLink": "Land's End",
-    "recipient": "Holly",
-    "holiday": "Christmas",
-    "notes": "May give for her birthday instead. Stored in closet downstairs.",
-    "purchased": true,
-    "wrapped": true
-  },
-  {"title": "Notebook",
-    "price": "$10",
-    "storeLink": "www.target.com/notebook.html",
-    "recipient": "Kate",
-    "holiday": "Birthday",
-    "notes": "Stored in closet downstairs.",
-    "purchased": true,
-    "wrapped": false
-  }
+  // {"title": "Red shirt",
+  //   "price": "$20",
+  //   "storeLink": "Land's End",
+  //   "recipient": "Holly",
+  //   "holiday": "Christmas",
+  //   "notes": "May give for her birthday instead. Stored in closet downstairs.",
+  //   "purchased": true,
+  //   "wrapped": true
+  // },
+  // {"title": "Notebook",
+  //   "price": "$10",
+  //   "storeLink": "www.target.com/notebook.html",
+  //   "recipient": "Kate",
+  //   "holiday": "Birthday",
+  //   "notes": "Stored in closet downstairs.",
+  //   "purchased": true,
+  //   "wrapped": false
+  // }
 
 ];
 
