@@ -2,6 +2,7 @@
 
 angular.module('giftClosetApp')
 .controller('giftCtrl', function($scope, dataService) {
+
   $scope.deleteGift = function(gift, index) {
     $scope.gifts.splice(index, 1);
     dataService.deleteGift(gift);
@@ -12,10 +13,17 @@ angular.module('giftClosetApp')
       if(gift.edited) {
         return gift
       };
-    })
+    });
+
     dataService.saveGifts(filteredGifts)
-    .finally($scope.resetGiftState());
+      .finally($scope.resetGiftState());
   };
+
+  $scope.addGift = function(gift) {
+    dataService.saveGifts(gift)
+      .finally($scope.resetGiftState());
+  }
+
 
   $scope.resetGiftState = function() {
     $scope.gifts.forEach( function(gift) {

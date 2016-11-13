@@ -2,6 +2,11 @@
   font-weight: bold;
   margin-right: 0;
 }
+
+a, a:hover, a:active, a:visited a:link {
+  text-decoration: none;
+}
+
 h1 {
   font-weight: bold;
   margin-bottom: 30px;
@@ -27,7 +32,7 @@ strong {
 
 .list {
   background: #fff;
-  width: 80%;
+  width: 90%;
   min-width: 500px;
   margin: 80px auto 0;
   border-top: 40px solid #5a6772;
@@ -62,7 +67,7 @@ strong {
     color: #fff;
     padding: 25px 0 27px 25px; }
 
-input[type="checkbox"] {
+/*input[type="checkbox"] {
     display:none;
 }
 input[type="checkbox"]  {
@@ -76,11 +81,12 @@ input[type="checkbox"]  {
 }
 input[type="checkbox"]:checked  {
     background:url(checkbox-filled.svg) left top no-repeat;
-}
+}*/
 
 
 /* Layout
 ================================= */
+
 body {
   padding-top: 30px;
 }

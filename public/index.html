@@ -9,10 +9,22 @@
     <link rel="stylesheet" href="/styles/index.css" type="text/css">
     <link rel="stylesheet" href="/styles/main.css" type="text/css">
     <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+    <script src="/vendor/angular.js"></script>
+    <script src="/vendor/angular-modal-service.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/addGift.js"></script>
+    <script src="/scripts/controllers/showAddGift.js"></script>
+    <script src="/scripts/controllers/gift.js"></script>
+    <script src="/scripts/controllers/main.js"></script>
+    <script src="/scripts/services/data.js"></script>
+    <script src="/scripts/directives/gift.js"></script>
+    <script src="/scripts/directives/showAddGift.js"></script>
+    <script src="/scripts/directives/addGift.js"></script>
+
 </head>
 <body ng-app="giftClosetApp">
     <ng-include src="'templates/navbar.html'"></ng-include>
-    <div class="section">
+    <div class="section" id="blurb">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -24,32 +36,52 @@
         </div>
       </div>
     </div>
-    <div class="section " >
+    <div class="section" id="large-title" >
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 contenteditable="true">Gifts in My Closet</h1>
+            <h1>Gifts in My Closet</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" id="list-gifts" >
+            <div class="add" ng-controller="showAddGiftCtrl">
+              <a href="#" class="label-primary" ng-click="showAddGift()"><h4><img src="/img/favicon-32x32.png" sizes="32x32"> New Gift</h4></a>
+            </div>
+            <div ng-controller="mainCtrl">
+              <gift></gift>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="section" id="list-gifts" ng-controller="mainCtrl">
-      <div class="add">
-        <a href="#" ng-click="addGift()">
-          + Add a New Gift</a>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">What's next?</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="/img/gifts-multiple.jpg" class="center-block img-circle img-responsive" width="250" height="250">
+            <h3 class="text-center">Check your closet</h3>
+            <p class="text-center">View the gifts you have stored.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="/img/person-new.png" class="center-block img-circle img-responsive" width="250" height="250">
+            <h3 class="text-center">Add a new recipient</h3>
+            <p class="text-center">Someone else to buy for? Add them here!</p>
+          </div>
+          <div class="col-md-4">
+            <img src="/img/family.png" class="center-block img-circle img-responsive" width="250" height="250">
+            <h3 class="text-center">View a recipient</h3>
+            <p class="text-center">See if you've bought that Christmas gift yet.</p>
+          </div>
+        </div>
       </div>
-      <gift></gift>
     </div>
-    <div class="section" id="add-gift" ng-controller="mainCtrl">
-      <!--TODO fix this-->
-      <addGift></addGift>
-    </div>
+
 <ng-include src="'templates/footer.html'"></ng-include>
 
-<script src="/vendor/angular.js"></script>
-<script src="/scripts/app.js"></script>
-<script src="/scripts/controllers/main.js"></script>
-<script src="/scripts/controllers/gift.js"></script>
-<script src="/scripts/services/data.js"></script>
-<script src="/scripts/directives/gift.js"></script>
 </body></html>

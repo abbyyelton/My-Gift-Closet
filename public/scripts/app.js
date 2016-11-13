@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('giftClosetApp', []);
+angular.module('giftClosetApp', ['angularModalService']);

@@ -10,13 +10,4 @@ angular.module('giftClosetApp')
     $scope.gifts =  gifts;
     });
 
-  $scope.addGift = function() {
-
-    //modal here
-
-    // $scope.gifts.unshift({title: "This is a new gift.",
-    //                   holiday: "Christmas",
-    //                   purchased: true});
-  };
-
-})
+});

@@ -1,126 +1,62 @@
-<!-- Modal -->
- <div class="modal fade" id="addGiftModal" role="dialog">
-   <div class="modal-dialog">
 
-<!--use stuff from down below-->
-
-     <div class="modal-content" id="add-gift">
-       <div class="container">
-         <div class="row">
-           <div class="col-md-12">
-             <h1>Add a gift</h1>
-           </div>
+<div class="modal fade">
+ <div class="modal-dialog modal-lg">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" ng-click="close()" data-dismiss="modal" aria-hidden="true">&times;</button>
+       <h4 class="modal-title">{{header}}</h4>
+     </div>
+     <div class="modal-body">
+      <form class="form-horizontal" role="form">
+       <div class="form-group">
+          <label for="inputTitle" class="col-sm-2 control-label">Title</label>
+         <div class="col-sm-10">
+           <input type="text" class="form-control" id="title" placeholder="Title or Description" ng-model="title">
          </div>
-         <div class="row">
-           <div class="col-md-8">
-             <form class="form-horizontal" role="form">
-               <div class="form-group">
-                 <div class="col-sm-2">
-                   <label for="inputTitle" class="control-label">Title</label>
-                 </div>
-                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="inputTitle" placeholder="Title">
-                 </div>
-               </div>
-               <!-- <div class="form-group">
-                 <div class="col-sm-2">
-                   <label for="inputDescription" class="control-label">Description</label>
-                 </div>
-                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="inputDescription" placeholder="Description">
-                 </div>
-               </div> -->
-               <div class="form-group">
-                 <div class="col-sm-2">
-                   <label for="inputPrice" class="control-label">Price</label>
-                 </div>
-                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="inputPrice" placeholder="Price">
-                 </div>
-               </div>
-               <div class="form-group">
-                 <div class="col-sm-2">
-                   <label for="inputStore" class="control-label">Store</label>
-                 </div>
-                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="inputStore" placeholder="Store">
-                 </div>
-               </div>
-               <div class="form-group">
-                 <div class="col-sm-2">
-                   <label for="inputLink" class="control-label">Link</label>
-                 </div>
-                 <div class="col-sm-10">
-                   <input type="url" class="form-control" id="inputLink" placeholder="url">
-                 </div>
-               </div>
-               <div class="form-group">
-                 <div class="col-sm-2">
-                   <label for="inputRecipient" class="control-label" contenteditable="true">Recipient</label>
-                 </div>
-                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="inputRecipient" placeholder="Recipient	">
-                 </div>
-               </div>
-               <div class="form-group">
-                 <div class="col-sm-2">
-                   <label for="inputHoliday" class="control-label">Holiday</label>
-                 </div>
-                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="inputHoliday" placeholder="Holiday">
-                 </div>
-               </div>
-               <div class="form-group">
-                 <div class="col-sm-2">
-                   <label for="inputNotes" class="control-label">Notes</label>
-                 </div>
-                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="inputNotes" placeholder="Where you stored gift, when you will buy, etc.">
-                 </div>
-               </div>
-               <div class="form-group col-sm-offset-5">
-                 <label class="form-check-inline col-sm-3">
-                   <input class="form-check-input" type="checkbox" id="purchasedCheckbox" value="purchased">Purchased</label>
-                 <label class="form-check-inline col-sm-3">
-                   <input class="form-check-input" type="checkbox" id="wrappedCheckbox" value="wrapped">Wrapped</label>
-               </div>
-               <div class="form-group">
-                 <div class="col-sm-offset-2 col-sm-10">
-                   <button type="submit" class="btn btn-default">Save</button>
-                 </div>
-               </div>
-             </form>
-           </div>
-
-
-
-     <!-- Modal content  Put this up above-->
-
-       <div class="modal-header">
-         <button type="button" class="close" data-dismiss="modal">&times;</button>
-         <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> Login</h4>
        </div>
-       <div class="modal-body">
-         <form role="form">
-           <div class="form-group">
-             <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-             <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-           </div>
-           <div class="form-group">
-             <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-             <input type="text" class="form-control" id="psw" placeholder="Enter password">
-           </div>
-           <div class="checkbox">
-             <label><input type="checkbox" value="" checked>Remember me</label>
-           </div>
-           <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
-         </form>
+       <div class="form-group">
+         <label for="inputStore" class="col-sm-2 control-label">Store/Link</label>
+         <div class="col-sm-10">
+           <input type="text" class="form-control" id="storeLink" placeholder="Store or URL" ng-model="storeLink">
+         </div>
        </div>
-       <div class="modal-footer">
-         <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-         <p>Not a member? <a href="#">Sign Up</a></p>
-         <p>Forgot <a href="#">Password?</a></p>
+       <div class="form-group">
+         <label for="inputRecipient" class="col-sm-2 control-label">Recipient</label>
+         <div class="col-sm-10">
+           <input type="text" class="form-control" id="recipient" placeholder="Who the gift is for" ng-model="recipient">
+         </div>
        </div>
+       <div class="form-group">
+         <label for="inputHoliday" class="col-sm-2 control-label">Holiday</label>
+         <div class="col-sm-10">
+           <input type="text" class="form-control" id="holiday" placeholder="Christmas, Birthday, etc." ng-model="holiday">
+         </div>
+       </div>
+       <div class="form-group">
+         <label for="inputPrice" class="col-sm-2 control-label">Price</label>
+         <div class="col-sm-10">
+           <input type="text" class="form-control" id="price" placeholder="cost" ng-model="price">
+         </div>
+       </div>
+       <div class="form-group">
+         <label for="inputPurchased" class="col-sm-2 control-label">Purchased</label>
+         <div class="col-sm-10">
+           <label class="radio-inline"><input type="radio" name="purchased" ng-model="purchased" ng-value="true">Yes</label>
+           <label class="radio-inline"><input type="radio" name="purchased" ng-model="purchased" ng-value="false">No</label>
+         </div>
+       </div>
+       <div class="form-group">
+         <label for="inputWrapped" class="col-sm-2 control-label">Wrapped</label>
+         <div class="col-sm-10">
+           <label class="radio-inline"><input type="radio" name="wrapped" ng-model="wrapped" ng-value="true">Yes</label>
+           <label class="radio-inline"><input type="radio" name="wrapped" ng-model="wrapped" ng-value="false">No</label>
+         </div>
+       </div>
+      </form>
+     </div>
+     <div class="modal-footer center-block">
+       <button type="button" ng-click="close()" class="btn btn-primary" data-dismiss="modal">Add</button>
+       <button type="button" ng-click="cancel()" class="btn">Cancel</button>
      </div>
    </div>
  </div>

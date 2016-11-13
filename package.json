@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-modal-service": "^0.10.1",
     "body-parser": "1.15.2",
     "mongoose": "4.6.5"
   }
