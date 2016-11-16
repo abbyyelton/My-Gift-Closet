@@ -29,5 +29,9 @@ angular.module('giftClosetApp')
       queue.push(request);
     });
     return $q.all(queue).then(function(results) {
+      //make sure new _id is assigned to $gifts
+       if (gifts[gifts.length-1]._id === undefined ) {
+         gifts[gifts.length-1]._id = results[0].data.gift._id;
+       }
     });
 }});
